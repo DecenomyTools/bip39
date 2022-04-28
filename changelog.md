@@ -1,3 +1,9 @@
+# 1.0.1
+
+* Add most DECENOMY coins networks
+* Sets hardened addresses as default 
+* Add option to manually change coin number in bip44 derivation
+
 # 0.5.4
 
 * Add Particl network
