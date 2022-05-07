@@ -942,6 +942,7 @@
   }
 
   function getDerivationPath() {
+    var useHardenedAddresses = DOM.hardenedAddresses.prop("checked");
     if (bip44TabSelected()) {
       var purpose = parseIntNoNaN(DOM.bip44purpose.val(), 44);
       var coin = parseIntNoNaN(DOM.bip44coin.val(), 0);
@@ -951,7 +952,7 @@
       path += purpose + "'/";
       path += coin + "'/";
       path += account + "'/";
-      path += change + "'";
+      path += change + (useHardenedAddresses ? "'" : "");
       DOM.bip44path.val(path);
       var derivationPath = DOM.bip44path.val();
       console.log("Using derivation path from BIP44 tab: " + derivationPath);
