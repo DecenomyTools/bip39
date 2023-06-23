@@ -396,6 +396,16 @@ libs.bitcoin.networks.dashd = {
   scriptHash: 0x00, // Irrelevant?? Likely replaced by seed
   wif: 0x7d, // Private key pre-fix - Decode any priv key with Base58Check
 };
+libs.bitcoin.networks.fls = {
+  messagePrefix: "unused",
+  bip32: {
+    public: 0x022d2533, // Irrelevant, replaced by seed
+    private: 0x0221312b, // Irrelevant, replaced by seed
+  },
+  pubKeyHash: 0x24, // Address pre-fix hash
+  scriptHash: 0x00, // Irrelevant?? Likely replaced by seed
+  wif: 0x42, // Private key pre-fix - Decode any priv key with Base58Check
+};
 libs.bitcoin.networks.kyan = {
   messagePrefix: "unused",
   bip32: {

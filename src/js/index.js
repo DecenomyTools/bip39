@@ -2376,6 +2376,13 @@
       },
     },
     {
+      name: "FLS - Flits",
+      onSelect: function () {
+        network = libs.bitcoin.networks.fls;
+        setHdCoin(850);
+      },
+    },
+    {
       name: "KYAN - Kyanite",
       onSelect: function () {
         network = libs.bitcoin.networks.kyan;

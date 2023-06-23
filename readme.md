@@ -63,6 +63,20 @@ Make changes in `src/*`.
 Changes are applied during release using the command `python compile.py`, so
 please do not commit changes to `bip39-standalone.html`
 
+### Adding New DECENOMY Coins
+
+1. Obtain an address of the coin and a private key of the coin (any will do).
+2. Use http://lenschulwitz.com/base58, or any other base58 decoder to extract the HEX prefix of both the decoded private key and public address. The prefix will be the first byte (or first two characters) of the decoded output.
+3. Update `src/bitcoinjs-extensions.js` with a new element for the coin, updating the `pubKeyHash` with the public address prefix and `wif` with the private key prefix.
+4. Now run `dumpwallet` command on the coin wallet. You can run this on any wallet.dat file (a new empty wallet.dat is recommended). From the output, you can check what the coin index the team set for that coin in one of lines with `hdkeypath` set.
+
+        E.g. `hdkeypath=m/44'/832'/0'/1'/83'`. The coin index is the second value, 832, in this case SAPP. 
+
+5. Once you extracted the coin index, update `src/index.js` with an entry for the coin and updated coin index at `setHdCoin();`.
+6. Save files and compile.
+
+
+
 # Tests
 
 Tests depend on
