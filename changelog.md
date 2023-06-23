@@ -1,3 +1,8 @@
+# 1.0.3
+
+* Added Flits network
+* Adds more documentation for DECENOMY coins
+
 # 1.0.1
 
 * Add most DECENOMY coins networks
