@@ -63,7 +63,7 @@ Make changes in `src/*`.
 Changes are applied during release using the command `python compile.py`, so
 please do not commit changes to `bip39-standalone.html`
 
-### Adding New DECENOMY Coins
+### Adding DECENOMY Coins
 
 1. Obtain an address of the coin and a private key of the coin (any will do).
 2. Use http://lenschulwitz.com/base58, or any other base58 decoder to extract the HEX prefix of both the decoded private key and public address. The prefix will be the first byte (or first two characters) of the decoded output.
